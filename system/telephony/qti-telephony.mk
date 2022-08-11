@@ -38,7 +38,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     telephony.active_modems.max_count=2 \
     telephony.lteOnCdmaDevice=1
 
-ifeq ($(TARGET_BUILD_VARIANT),user)
+ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.ims.disableADBLogs=1 \
     persist.vendor.ims.disableDebugLogs=1 \
