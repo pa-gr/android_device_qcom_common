@@ -32,3 +32,7 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
     write /dev/cpuctl/camera-daemon/cpu.uclamp.min 1
     write /dev/cpuctl/caemera-daemon/cpu.uclamp.latency_sensitive 1
+
+on property:persist.sys.device_provisioned=1 && property:vendor.post_boot.parsed=1
+    # Cap dex2oat cpu utilization
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
