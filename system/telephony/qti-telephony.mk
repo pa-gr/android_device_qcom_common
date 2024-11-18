@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/system/telephony/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml
+
 # AIDL / HIDL
 SYSTEM_EXT_MANIFEST_FILES += $(QCOM_COMMON_PATH)/system/telephony/atcmdfwd-saidl.xml
 
