@@ -13,9 +13,6 @@ else
     TARGET_MEDIA_DIR := $(TARGET_KERNEL_VERSION)
 endif
 
-# Inherit configuration from the HAL.
-$(call inherit-product-if-exists, hardware/qcom/media/product.mk)
-
 # Enable 64-bit mediaserver
 PRODUCT_VENDOR_PROPERTIES += \
     ro.mediaserver.64b.enable=true
